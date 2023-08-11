@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全体</title>
+    <link rel="stylesheet" href="../static/bbs.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="{{ url_for('bbs_back') }}">掲示板トップ</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('bbs_back') }}" class="info">トップ</a></li>
+                <li><a href="" class="info">利用規約</a></li>
+                <li><a href="" class="info">お問い合わせ</a></li>
+                <li><a href="" class="info">アカウント：{{ userID }}</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="category">
+        <ul>
+            <li><a href="{{ url_for('all') }}">全体</a></li>
+            <li><a href="{{ url_for('music') }}">音楽・サウンド</a></li>
+            <li><a href="{{ url_for('animal') }}">動物</a></li>
+            <li><a href="{{ url_for('cooking') }}">料理</a></li>
+            <li><a href="{{ url_for('travel') }}">旅行・アウトドア</a></li>
+            <li><a href="{{ url_for('sports') }}">スポーツ</a></li>
+            <li><a href="{{ url_for('politics')}}">社会・政治・時事</a></li>
+            <li><a href="{{ url_for('technology') }}">技術・工作</a></li>
+            <li><a href="{{ url_for('others') }}">その他</a></li>
+        </ul>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
