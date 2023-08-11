@@ -49,6 +49,6 @@ call C:\Users\hosoy\anaconda3\Scripts\deactivate.bat
 
 ```Shell
 export FLASK_APP=flaskr
-set FLASK_ENV=development
+export FLASK_ENV=development
 flask run
 ```
