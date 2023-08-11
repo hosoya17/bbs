@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全体</title>
+    <link rel="stylesheet" href="../static/bbs.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="{{ url_for('all') }}">全体</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('bbs_back') }}" class="info">トップ</a></li>
+                <li><a href="" class="info">利用規約</a></li>
+                <li><a href="" class="info">お問い合わせ</a></li>
+                <li><a href="" class="info">アカウント：{{ userID }}</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+
+    <div class="list">
+        {% for post in posts %}
+        <h3>{{ post.no }}. {{ post.id }} {{ post.date }} {{ post.time }}</h3>
+        <p>{{ post.post }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+
+    <div class="container">
+        <form method="post" action="{{ url_for('all_add') }}">
+            <h2>投稿内容</h2>
+            {% if error %}
+            <div class="error">{{ error | safe }}</div>
+            {% endif %}
+            <textarea autocomplete="off" name="post"></textarea>
+            <div class="button-container">
+                <input type="submit" value="投稿" class="checkBtn">
+            </div>
+        </form>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
