@@ -1,0 +1,76 @@
+body {
+    background-image: linear-gradient(90deg, rgba(65, 164, 253, 1), rgba(14, 244, 255, 1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    background-color: #F7F7F7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+}
+
+.login {
+    text-align: center;
+}
+
+input {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+input[type="submit"] {
+    background: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-image: linear-gradient( 135deg, #3C8CE7 10%, #00EAFF 100%);
+}
+
+.a {
+    background: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.backBtn {
+    padding: 5px 10px;
+    width: 100px;
+    margin-left: -200px;
+    margin-top: -10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    color: red;
+}
+
+.checkTable td{
+    border-bottom: 1px solid black;
+}
