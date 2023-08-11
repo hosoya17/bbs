@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>確認画面</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <form method="post" action="{{ url_for('comp') }}">
+        <h2>確認画面</h2>
+        <table class="checkTable">
+            <tbody>
+                <tr>
+                    <th>ユーザーID</th>
+                    <td>{{ user.userName }}</td>
+                </tr>
+                <tr>
+                    <th>パスワード</th>
+                    <td>{{ '●' * user.password|length }}</td>
+                </tr>
+                <tr>
+                    <th>メールアドレス</th>
+                    <td>{{ user.mail }}</td>
+                </tr>
+            </tbody>
+        </table>    
+        <div class="button-container">
+            <input type="submit" value="登録">
+        </div>
+    </form>
+    <form action="{{ url_for('add_back') }}" class="a">
+        <input type="submit" value="戻る" class="backBtn">
+    </form>
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
