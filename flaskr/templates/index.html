@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <form method="post" action="{{ url_for('bbs') }}">
+        <h2>ログイン画面</h2>
+        {% if error %}
+            <div class="error">{{ error | safe }}</div>
+        {% endif %}
+        <div class="login">
+            <input type="text" placeholder="ユーザーID" autocomplete="off" name="userID"><br>
+            <input type="password" placeholder="パスワード" name="password"><br>
+            <input type="submit" value="ログイン">
+        </div>
+    </form>
+    <p class="text">アカウントを持っていませんか？</p>
+    <a href="{{ url_for('add') }}">アカウントを作成</a>
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
