@@ -1,15 +1,13 @@
 # bbs
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/hosoya17/bbs)
 ## 開発の概要
-ブラウザ上で動作する掲示板サイトです。
+ブラウザ上で動作する掲示板です。
 ## 実装内容
 ・アカウント登録機能<br>
 ・ログイン機能<br>
 ・投稿機能<br>
 ・時刻による背景色の変化
-## 実装予定
-・お問い合わせフォーム<br>
-・クロスサイトスクリプティング対策<br>
+## 未実装
 ・SQLインジェクション対策
 ### 開発環境
 開発環境：Visual Studio Code, Anaconda3, Flask<br>
@@ -21,7 +19,7 @@
 事前に各ライブラリをインストールする必要があります。インストール方法は以下の通りです。<br>
 
 ```Shell
-pip install flask, jinja2, sqlite3, hashlib, re, arrow
+pip install flask, jinja2, sqlite3, hashlib, arrow
 ```
 #### Flaskアプリ起動
 Flaskアプリの起動方法は以下の通りです。
